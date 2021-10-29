@@ -1,0 +1,44 @@
+.header {
+    height: 130px;
+    background-color:#6aa84f;
+    margin-bottom: 20px;
+    border: 2px solid black;
+}
+
+.navigation {
+    flex: 1.5;
+    height: 450px;
+    background-color: #6fa8dc;
+    margin-right: 15px;
+    border: 2px solid black;
+}
+
+.main { 
+    flex: 5;
+    background-color: #e06666;
+    padding: 50px;
+    border: 2px solid black;
+
+}
+
+.subflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    
+}
+
+.subCont { 
+    background-color: #ffd966;
+    width: 30%;
+    height: 300px;
+    border: 2px solid black;
+}
+
+.advertisement{
+    background-color: #b4a7d6;
+    height: 120px;
+    width: inherit;
+    border: 2px solid black;
+}
