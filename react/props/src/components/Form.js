@@ -12,10 +12,10 @@ const Form = () => {
     const [passerror,setPasserror] = useState("");
     const [confpass, setConfpass] = useState("");
     const [conferror, setConferror] = useState("");
+    const [submiterror, setSubmiterror] = useState("");
     const [hasbeensubmitted, setHasbeensubmitted] = useState(false);
 
     const createUser = (e) => {
-        e.preventDefault();
         const newUser = {
             firstname, lastname, email, password
         };
@@ -27,6 +27,7 @@ const Form = () => {
         setConfpass("");
         setHasbeensubmitted(true)
     }
+
 
     const handleFname = (e) => {
         e.preventDefault();
@@ -118,7 +119,7 @@ const Form = () => {
                         <input id="lastname" type ="text" onChange={ handleLname } value={lastname}/>
                     </div>
                         {
-                            emailerror?
+                            lnameerror?
                             <p style = {{color:'red'}}> {lnameerror}</p>:null
                         }
                     <div>
@@ -146,6 +147,10 @@ const Form = () => {
                         }
                     </div>
                     <input type="submit" value="Submit"/>
+                    {
+                        submiterror?
+                        <p style = {{color:'red'}}> {submiterror}</p>:null
+                    }
                 </form>
                 <h2>First Name: {firstname}</h2>
                 <h2>Last Name: {lastname}</h2>
