@@ -20,7 +20,6 @@ function App() {
     const charToUpdate = myChar[idx];
     charToUpdate.isAlive = !charToUpdate.isAlive;
     setMyChar([...myChar]);
-    // how does this change it, does this just copy it how it is? how does charToUpdate actually change MyChar??
   }
   
   

@@ -12,7 +12,7 @@ const Box_display = (props) =>{
     }
 
     return(
-        <div className="flex">
+        <div className={styles.flex}>
             {
                 props.colors.map((color) =>{
                 console.log(color);
