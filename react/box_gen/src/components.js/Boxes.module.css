@@ -7,3 +7,18 @@
 .flex {
     display: flex;
 }
+
+.tab {
+    padding: 3px 5px;
+    border: 2px solid black;
+}
+
+.tab_display {
+    width:500px;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.container {
+    margin: 50px;
+}
