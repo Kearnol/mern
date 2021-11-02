@@ -1,0 +1,46 @@
+table {
+    width: 600px;
+    margin: auto;
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    padding: 3px;
+    background-color: rgb(129, 123, 242);
+}
+
+td {
+    border: 1px solid #333;;
+    padding: 5px;
+    background-color: rgb(249, 244, 252);
+    color: black;
+    
+}
+
+input[type="text"] {
+    width: 500px;
+    height: 1.5em;
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 10px 10px 40px;
+}
+
+.delete {
+    background-color: indianred;
+    color:rgb(225, 225, 225);
+    border: none;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+.submit {
+    background-color: rgb(157, 239, 130);
+    color:rgb(35, 35, 35);
+    border: none;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
