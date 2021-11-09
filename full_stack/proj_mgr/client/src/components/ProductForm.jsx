@@ -11,6 +11,9 @@ export default () => {
         axios.post('http://localhost:8000/api/product/new', {title, price, description})
         .then(newproduct => console.log(newproduct))
         .catch(err=> console.log("We had a problem", err))
+        setPrice("")
+        setTitle("")
+        setDescription("")
     }
 
     return(
