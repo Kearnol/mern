@@ -11,11 +11,11 @@ export default () => {
     useEffect(() => {
         console.log("useEffect Ran")
         axios.get('http://localhost:8000/api/product')
-        .then(res =>{setProducts(res.data); setLoaded(true)})
+        .then(res =>{console.log(res); setProducts(res.data); setLoaded(true)})
         .catch(err => console.log("error: ", err));
     }, [updated]);        
 
-    const removeFromDom = (id) =>{
+    const removeFromDom = () =>{
         // setProducts(products.filter(product => product._id != id))
         // if useEffect didn't already setProducts() - this is how^^. 
         setUpdated(!updated);
@@ -24,9 +24,17 @@ export default () => {
     const update = () => {
         setUpdated(!updated);
     }
+
+    const createProduct = (product) => {
+        axios.post('http://localhost:8000/api/product/new', product)
+        .then(newproduct => {console.log(newproduct);
+            update();
+        })
+        .catch(err=> console.log("We had a problem", err))
+    }
         return (
             <div>
-                <ProductForm update={ update }/>
+                <ProductForm onSubmitProp={ createProduct } initTitle={""} initPrice={""} initDescription={""} />
                 <hr/>
                 {loaded && <ProductList products={products} removeFromDom={ removeFromDom }/>}
             </div>

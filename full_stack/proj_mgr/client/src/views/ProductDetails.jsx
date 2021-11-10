@@ -11,7 +11,7 @@ export default () => {
 
     useEffect (()=> {
         axios.get(`http://localhost:8000/api/product/${id}`)
-        .then((res)=>{console.log(res); return res})
+        .then((res)=>{return res})
         .then((res)=> {setProduct(res.data); setDataReturned(true)})
         .catch((err)=> console.log("err",err));
     }, []);
@@ -24,7 +24,6 @@ export default () => {
     return (
         <>
         <div>
-            {dataReturned? console.log(product): ""}
             <h3>Product Title: </h3><p>{product.title}</p>
             <h3>Product Price:</h3><p>${product.price}</p>
             <h3>Product Description:</h3> <p>{product.description}</p>
