@@ -18,7 +18,7 @@ export default () => {
 
         const goBack = (e) => {
             e.preventDefault();
-            history.push("/api/product");
+            history.push("/");
         }
     
     return (
